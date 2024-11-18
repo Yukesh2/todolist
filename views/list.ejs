@@ -1,0 +1,43 @@
+
+  <%- include('header'); -%>
+  
+  
+  
+  <div class="box-1" id="heading">
+       <h1> <%= KindofDay %> </h1>
+
+    </div>
+    <div class="box" id="list-item">
+        
+
+
+            <% for(let i =0 ; i<list_name.length; i++){%>
+                <div class="item">
+                    <input type="checkbox" onclick="toggleLineThrough(this)">
+                    <p class="paragraph">  <%= list_name[i] %></p>
+             
+                   </div>
+                
+           <%  } %>
+           <form method="POST" action="/" class="item">
+            <input type="text" name="newitem" placeholder="New Item" >
+            <button type="submit" name="list" value=<%= KindofDay %>>+</button>
+          
+            
+        </form>
+           
+            
+                 
+     
+               
+             
+          
+       
+    </div>
+    
+   
+    <%- include('footer'); -%> 
+   
+ 
+    
+
